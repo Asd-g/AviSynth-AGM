@@ -31,7 +31,8 @@ AGM (clip input, float "luma_scaling", bool "fade", int "opt")
 
 - fade\
     If the clip has bit depth less than 32-bit, the range must be tv.\
-    True: Pure white and pure black pixels are copied (16/235 8-bit). Pixels with value of 18/17 (8-bit) fades out.\
+    True: If the clip has bit depth less than 32-bit - pure white and pure black pixels are copied (16/235 8-bit); pixels with value of 18/17 (8-bit) fades out.\
+    If the clip has bit depth 32-bit - pixels with value 0.0 and 1.0 are copied.\
     Default: True.
 
 - opt\
